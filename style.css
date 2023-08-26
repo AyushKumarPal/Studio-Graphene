@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&family=Syne:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&family=Syne:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;700;800;900&display=swap'); 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #fff;
-    /* font-family: 'Syne', sans-serif; */
 }
 
 body,
@@ -16,7 +15,7 @@ html {
 
 .main {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #000;
 }
 
@@ -54,7 +53,7 @@ html {
 
 .top-right .elem1 {
     display: flex;
-
+    gap: 50px;
     & a {
         text-decoration: none;
     }
@@ -62,6 +61,7 @@ html {
 
 .top-right .elem2 {
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 
@@ -71,8 +71,6 @@ html {
     justify-content: space-between;
     padding-top: 5px;
     margin-left: 7vw;
-
-    /* border-bottom: 2px solid white; */
     & h2 {
         font-family: 'Poppins', sans-serif;
         font-size: 2vw;
@@ -86,74 +84,47 @@ html {
     }
 }
 
+.hcontent-right{
+    display: flex;
+    gap: 20px;
+}
+
 .line {
-    border: 2px solid white;
+    border: 1px solid white;
     width: 86%;
     margin-left: auto;
     margin-right: auto;
 }
 
-ul {
+.menu ul {
+    display: inline-flex;
+    padding-top: 10px;
     list-style: none;
-    padding-top: 20px;
     font-family: 'Work Sans', sans-serif;
+    font-size: 1.2vw;
     font-weight: 900;
-    font-size: 1vw;
     text-transform: uppercase;
 }
 
-ul li {
-    display: inline-block;
-    /* position: relative; */
-}
-
-ul #product {
-    font-weight: 200;
-}
-
-ul li a {
+.menu ul li a{
     text-decoration: none;
-    padding-top: 1vw;
     margin-left: 9.4vw;
 
-    &:hover {
+    &:hover{
         border-bottom: 2px solid #fff;
     }
 }
 
-ul li ul.dropdown {
-    min-width: 50%;
-    /* Set width of the dropdown */
-    display: none;
-    background: red;
-    position: absolute;
-    /* z-index: 999; */
-    left: 1;
+.menu ul :nth-child(3){
+    font-weight: 200;
 }
 
-ul li:hover ul.dropdown {
+.menu ul :nth-child(3) ul{
     display: block;
     font-weight: 200;
 }
 
-/* .links{
-    padding-top: 20px;
-    text-transform: uppercase;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 900;
-    font-size: 1vw;
-}
-
-.links a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 900;
-    font-size: 1vw;
-    margin-left: 9.5vw;
-} */
-
-#right {
+.hcontent-right {
     display: flex;
     align-items: baseline;
     font-family: 'Work Sans', sans-serif;
@@ -161,52 +132,66 @@ ul li:hover ul.dropdown {
     margin-right: 7vw;
 }
 
-.hero img {
-    margin-left: 34.6vw;
-}
-
-.o-container {
-    background-color: #F07E15;
-    width: 64.6vw;
-    height: 50vh;
-    left: 86vw;
-    margin-top: 18vh;
-    margin-left: 35vw;
-
-    & .text{
-        position: relative;
-        top: 40vh;
-        margin-left: 56.3vw;
-        font-family: 'Work Sans';
-        font-weight: 400;
-        text-transform: uppercase;
-        color: #000;
-    }
-}
-
-.boy img{
+.hero{
     position: relative;
-    bottom: 70vh;
-    left: 38vw;
 }
-/* .img-group {
-} */
 
+.hero 
 
-
-/* .hero-center{
-    font-family: 'Syne', sans-serif;
+.heading{
+    font-family: 'Syne';
+    font-weight: 800;
     font-size: 4vw;
-    padding-top: 6vw;
-    & :nth-child(1){
-        margin-left: 8.4vw;
+    line-height: 1.2;
+    font-stretch: expanded;
+
+    & h1{
+        margin-left: 10vw;
+    }
+}
+
+.text p{
+    margin-left: 22vw;
+}
+
+.text h1{
+    padding-left: 7vw;
+}
+
+.o-container{
+    position: fixed;
+    background-color: #F07E15;
+    text-transform: uppercase;
+    font-family: 'Work Sans';
+    height: 20vw;
+    width: 59.33vw;
+    left: 40%;
+    bottom: 10vh;
+
+    & .content{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        right: 1.5vw;
+        top: 30vh; 
     }
 
-    & :nth-child(2){
-        margin-left: 20vw;
+    & img:nth-child(1) {
+        left: 50%;
+        bottom: 40%;
+        position: absolute;
     }
+}
 
-    & :nth-child(3){
-        margin-left: 11vw;
-    }
-} */
+#boy{
+    position: relative;
+    height: 654px;
+    left: 38%;
+    bottom: 71%;
+}
+
+.line2{
+    border: 1px solid #fff;
+    width: 60%;  
+}
